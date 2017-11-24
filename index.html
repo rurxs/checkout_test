@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="es_MX">
 	<head>
-        <meta charset="utf-8">        
-        <meta name="author" content="CHANGE-ME">
-        <meta name="description" content="CHANGE-ME">
-        
+        <meta charset="utf-8">
+        <meta name="author" content="Rojo Reyes">
+        <meta name="description" content="Checkout page example with card.js">
+
         <!-- Mobile -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="msapplication-tap-highlight" content="no">
-        
+
         <!-- Chrome -->
         <meta name="mobile-web-app-capable" content="yes">
-        <meta name="application-name" content="CHANGE-ME">
-        <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon.png">
-        
+        <meta name="application-name" content="CheckoutPage">
+        <link rel="icon" sizes="192x192" href="img/chrome-touch-icon.png">
+
         <!-- Safari -->
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="apple-mobile-web-app-title" content="CHANGE-ME">
-        <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
-        
+        <meta name="apple-mobile-web-app-title" content="CheckoutPage">
+        <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
         <!-- Windows 8 -->
-        <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon.png">
+        <meta name="msapplication-TileImage" content="img/ms-touch-icon.png">
         <meta name="msapplication-TileColor" content="#FFFFFF">
         
         
@@ -30,12 +30,45 @@
         
         <link rel="shortcut icon" href="favicon.ico">
         
-        <title>Sindelantal Checkout Page</title>
+        <title>Página de pago responsiva (incluye card.js)</title>
         <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
-        
+		
+		<link rel="stylesheet" type="text/css" href="css/grid.css" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
     </head>
+    <body>
+        <div id="cabecera">
+            <div class="grid grid-pad">
+                <div class="col-1-2">
+                   <div class="logo">
+                       <h1>siteBRAND</h1>
+                   </div>
+                </div>
+                <div class="col-1-2">
+                   <div class="pasos">
+                       <h3><span>Paso 1</span><span>Paso 2</span><span>Paso 3</span></h3>
+                   </div>
+                </div>
+            </div>
+        </div>
 
-    <body>    
-        <!-- HTML  -->
+        <div id="checkout">
+            <div class="grid grid-pad">
+                <div class="col-1-2">
+                   <div class="content">
+                       <div id="nombre">Empresa X Y Z</div>
+                       <div class="sub">Su compra está lista</div>
+                   </div>
+                </div>
+                <div class="col-1-2">
+                    <div id="pago">
+                       <div class="content">
+                           <div class="sub">Finalizar su compra</div>
+                           <hr>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
