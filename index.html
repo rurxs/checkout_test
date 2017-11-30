@@ -1,90 +1,155 @@
 <!DOCTYPE html>
 <html lang="es_MX">
 	<head>
-        <meta charset="utf-8">
-        <meta name="author" content="Rojo Reyes">
-        <meta name="description" content="Checkout page example with card.js">
+    <meta charset="utf-8">
+    <meta name="author" content="Rojo Reyes">
+    <meta name="description" content="Checkout page example with card.js">
 
-        <!-- Mobile -->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="msapplication-tap-highlight" content="no">
+    <!-- Mobile -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="msapplication-tap-highlight" content="no">
 
-        <!-- Chrome -->
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="application-name" content="CheckoutPage">
-        <link rel="icon" sizes="192x192" href="img/chrome-touch-icon.png">
+    <!-- Chrome -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="CheckoutPage">
+    <link rel="icon" sizes="192x192" href="img/chrome-touch-icon.png">
 
-        <!-- Safari -->
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="apple-mobile-web-app-title" content="CheckoutPage">
-        <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <!-- Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="CheckoutPage">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 
-        <!-- Windows 8 -->
-        <meta name="msapplication-TileImage" content="img/ms-touch-icon.png">
-        <meta name="msapplication-TileColor" content="#FFFFFF">
-        
-        
-        <meta name="theme-color" content="#000000">
-        
-        <link rel="shortcut icon" href="favicon.ico">
-        
-        <title>Página de pago responsiva (incluye card.js)</title>
-        <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
-		
-		<link rel="stylesheet" type="text/css" href="css/grid.css" />
-		<link rel="stylesheet" type="text/css" href="css/main.css" />
-    </head>
-    <body>
-        <div id="cabecera">
-            <div class="grid grid-pad">
-                <div class="col-6-12">
-                   <div class="logo">
-                       <h1>siteBRAND</h1>
-                   </div>
+    <!-- Windows 8 -->
+    <meta name="msapplication-TileImage" content="img/ms-touch-icon.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+
+
+    <meta name="theme-color" content="#000000">
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <title>Página de pago responsiva (incluye card.js)</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+    <script src="https://use.fontawesome.com/d4c8d9301a.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/grid.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+
+</head>
+
+<body>
+    <div id="cabecera">
+        <div class="grid grid-pad">
+            <div class="col-6-12">
+                <div class="logo">
+                    <h1>siteBRAND</h1>
                 </div>
-                <div class="col-6-12">
-                   <div class="pasos">
-                       <p>
-                       <span class="paso hecho">Paso 1</span><span class="paso activo">Paso 2</span><span class="paso siguiente">Paso 3</span></p>
-                   </div>
+            </div>
+            <div class="col-6-12">
+                <div class="pasos">
+                    <p>
+                        <span class="paso hecho">Paso 1</span><span class="paso activo">Paso 2</span><span class="paso siguiente">Paso 3</span></p>
                 </div>
             </div>
         </div>
-
-        <div class="grid grid-pad">
-            <div id="checkout">
-                <div class="col-1-2">
-                   <div class="content">
-                       <div id="nombre">Empresa X Y Z</div>
-                       <div class="sub">Su compra está lista</div>
-                       <hr>
-                       <div id="compra">
-                           <div>
-                               <img src="https://dummyimage.com/64x64/000/fff">
-                           </div>
-                           <div class="articulo">
-                               *ASUS ZenPad Z300M-A2-GR 16GB Negro Gris - Tablet* 
-                           </div>
-                           <div>
-                               $3,380.95
-                           </div>
-                           <div>
-                               2
-                           </div>
-                       </div>
-                   </div>
+    </div>
+    <div class="grid grid-pad color-a">
+        <div class="espaciador">
+        </div>
+        <div class="col-6-12 ">
+            <div class="content">
+                <div id="nombre">Empresa X Y Z</div>
+                <div class="sub">Su compra está lista</div>
+                <div id="cabecera-compras">
+                    <div class="label-articulo">
+                        Articulo
+                    </div>
+                    <div class="label-precio">
+                        Precio
+                    </div>
+                    <div class="label-cantidad">
+                        Cant
+                    </div>
                 </div>
-                <div class="col-1-2">
-                    <div id="pago">
-                       <div class="content">
-                           <div class="sub">Finalizar su compra</div>
-                           <hr>
-                       </div>
+                <hr>
+                <div id="una-compra">
+                    <div class="imagen">
+                        <img src="https://dummyimage.com/64x64/000/fff">
+                    </div>
+                    <div class="articulo">
+                        ASUS ZenPad Z300M-A2-GR 16GB Negro Gris - Tablet
+                    </div>
+                    <div class="precio">
+                        $3,380.95
+                    </div>
+                    <div class="cantidad">
+                        2
+                    </div>
+                </div>
+                <div id="una-compra">
+                    <div class="imagen">
+                        <img src="https://dummyimage.com/64x64/000/fff">
+                    </div>
+                    <div class="articulo">
+                        Lenovo TAB3 Essential - ZA0R0029US 7"
+                    </div>
+                    <div class="precio">
+                        $1,495.31
+                    </div>
+                    <div class="cantidad">
+                        1
+                    </div>
+                </div>
+                <div id="una-compra">
+                    <div class="imagen">
+                        <img src="https://dummyimage.com/64x64/000/fff">
+                    </div>
+                    <div class="articulo">
+                        Star Wars Figuras de Acción Star Wars Black Series
+                    </div>
+                    <div class="precio">
+                        $449.00
+                    </div>
+                    <div class="cantidad">
+                        1
+                    </div>
+                </div>
+                <div id="total">
+                    Total: $ 5,325.26
+                </div>
+                <div id="detalles-entrega">
+                    <h4>Dirección para la entrega</h4>
+                    <div class="direccion">
+                        <img src="img/entrega.png" alt="entrega a domicilio" align="left" width="64">
+                        <p>Calle Río Lerma 4, Piso 6
+                        Colonia Cuauhtémoc, CP 53000.
+                        Ciudad de México.<br>
+                        Teléfono: +1 (55) 336 8909<br>
+                        <a href="#">[Editar]</a>
+                        </p>
+                    </div>
+                </div>
+                <div id="seguir-comprando"><a class="btn"><i class="fa fa-reply" aria-hidden="true"></i> Seguir Comprando</a></div>
+            </div>
+        </div>
+        <div class="col-6-12">
+            <div class="content">
+                <div id="pago">
+                    <div class="sub">Realizar la compra</div>
+                    <hr>
+                    <div id="tarjeta">
+                        Tarjeta de crédito (o débito)
+                        <form>
+                        <input type="text" placeholder="Nombre"/>
+                        <input type="text" placeholder="Número "/>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+</body>
 </html>
