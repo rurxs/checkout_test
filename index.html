@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es_MX">
-	<head>
+
+<head>
     <meta charset="utf-8">
     <meta name="author" content="Rojo Reyes">
     <meta name="description" content="Checkout page example with card.js">
@@ -124,11 +125,8 @@
                     <h4>Dirección para la entrega</h4>
                     <div class="direccion">
                         <img src="img/entrega.png" alt="entrega a domicilio" align="left" width="64">
-                        <p>Calle Río Lerma 4, Piso 6
-                        Colonia Cuauhtémoc, CP 53000.
-                        Ciudad de México.<br>
-                        Teléfono: +1 (55) 336 8909<br>
-                        <a href="#">[Editar]</a>
+                        <p>Calle Río Lerma 4, Piso 6 Colonia Cuauhtémoc, CP 53000. Ciudad de México.<br> Teléfono: +1 (55) 336 8909<br>
+                            <a href="#">[Editar]</a>
                         </p>
                     </div>
                 </div>
@@ -141,15 +139,56 @@
                     <div class="sub">Realizar la compra</div>
                     <hr>
                     <div id="tarjeta">
-                        Tarjeta de crédito (o débito)
                         <form>
-                        <input type="text" placeholder="Nombre"/>
-                        <input type="text" placeholder="Número "/>
+                            <fieldset>
+                                <legend>Tarjeta de crédito (o débito)</legend>
+
+                                <!-- CARD DIV -->
+                                <div class="card-wrapper"></div>
+
+                                <label>Nombre</label>
+                                <p><input type="text" name="name"/></p>
+                                <label>Número en la tarjeta</label>
+                                <p><input type="text" placeholder="#### #### #### ####" name="number"/></p>
+                                <div class="ccform-cols">
+                                    <div class="ccform-left">
+                                        <div class="col-spacing-left">
+                                            <label>Fecha de Expiración</label>
+                                            <p><input type="text" placeholder="MM/AA" name="expiry"/></p>
+                                        </div>
+                                    </div>
+                                    <div class="ccform-right">
+                                        <div class="col-spacing-right">
+                                            <label>Número CCV</label>
+                                            <p><input type="text" placeholder="123" name="cvc"/></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="submit" value="PAGAR">
+                            </fieldset>
                         </form>
+                    </div>
+                </div>
+                <div id="otros">
+                    <div class="sub">Otras formas de pago</div>
+                    <div class="pagos">
+                        <div class="oxxo">
+                            <img src="img/oxxo.jpg">
+                        </div>
+                        <div class="paypal">
+                            <img src="img/paypal.jpg"/>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="http://127.0.0.1:61101/card/card.js"></script>
+    <script>
+        new Card({
+            form: document.querySelector('form'),
+            container: '.card-wrapper'
+        });
+</script>
 </body>
 </html>
