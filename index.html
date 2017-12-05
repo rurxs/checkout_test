@@ -46,13 +46,13 @@
         <div class="grid grid-pad">
             <div class="col-6-12">
                 <div class="logo">
-                    <h1>siteBRAND</h1>
+                    <img src="img/logo_example.png" alt="Logo">
                 </div>
             </div>
             <div class="col-6-12">
                 <div class="pasos">
                     <p>
-                        <span class="paso hecho">Paso 1</span><span class="paso activo">Paso 2</span><span class="paso siguiente">Paso 3</span></p>
+                        <span class="paso hecho">Compras</span><span class="paso activo">Pago</span><span class="paso siguiente">Confirmación</span></p>
                 </div>
             </div>
         </div>
@@ -147,20 +147,20 @@
                                 <div class="card-wrapper"></div>
 
                                 <label>Nombre</label>
-                                <p><input type="text" name="name"/></p>
+                                <p><input type="text" name="name" /></p>
                                 <label>Número en la tarjeta</label>
-                                <p><input type="text" placeholder="#### #### #### ####" name="number"/></p>
+                                <p><input type="text" placeholder="#### #### #### ####" name="number" /></p>
                                 <div class="ccform-cols">
                                     <div class="ccform-left">
                                         <div class="col-spacing-left">
                                             <label>Fecha de Expiración</label>
-                                            <p><input type="text" placeholder="MM/AA" name="expiry"/></p>
+                                            <p><input type="text" placeholder="MM/AA" name="expiry" /></p>
                                         </div>
                                     </div>
                                     <div class="ccform-right">
                                         <div class="col-spacing-right">
                                             <label>Número CCV</label>
-                                            <p><input type="text" placeholder="123" name="cvc"/></p>
+                                            <p><input type="text" placeholder="123" name="cvc" /></p>
                                         </div>
                                     </div>
                                 </div>
@@ -176,19 +176,32 @@
                             <img src="img/oxxo.jpg">
                         </div>
                         <div class="paypal">
-                            <img src="img/paypal.jpg"/>
+                            <img src="img/paypal.jpg" />
                         </div>
                     </div>
+                    <p><a href="#">¿Necesita ayuda para elegir una forma de pago?</a></p>
                 </div>
             </div>
         </div>
     </div>
-    <script src="http://127.0.0.1:61101/card/card.js"></script>
+    <script src="http://127.0.0.1:51028/card/card.js"></script>
     <script>
         new Card({
             form: document.querySelector('form'),
-            container: '.card-wrapper'
+            container: '.card-wrapper',
+
+            placeholders: {
+                number: '**** **** **** ****',
+                name: 'Nombre',
+                expiry: '**/****',
+                cvc: '***'
+            },
+
+            messages: {
+                validDate: 'fecha de\nexpiración',
+                monthYear: 'mm/a'
+            }
         });
-</script>
+    </script>
 </body>
 </html>
