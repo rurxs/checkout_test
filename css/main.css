@@ -4,26 +4,27 @@
 }
 
 body {
-    background-color: #fffff;
     margin-top: 2em;
     font-family: 'Roboto', sans-serif;
 }
 
-.color-c {
-    background-color: #aaaaaa;
+.gold {
+    background-color: #C0B283;
 }
 
-.color-b {
-    background-color: #fff;
+.papel {
+    background-color: #F4F4F4;
 }
 
-.color-a {
-    background-color: #f0f0f0;
+.carbon {
+     background-color: #373737;
 }
-
+.seda {
+     background-color: #DCD0C0;
+}
 .espaciador {
     clear: both;
-    height: 1em;
+    height: 2em;
 }
 
 #checkout {
@@ -43,14 +44,11 @@ body {
     font-size: 2em;
 }
 
-#articulos {
-    background-color: azure;
-}
-
 hr {
-    background: #aaa;
+    background: #373737;
     border: 0;
     height: 2px;
+    margin: .5em 0;
 }
 
 .sub {
@@ -67,8 +65,17 @@ hr {
 
 .logo {
     text-align: center;
+    font-size: 2em;
 }
-
+.paso {
+    margin-right: 1em;
+}
+.paso:last-child {
+    margin-right: 0;
+}
+.siguiente{
+    opacity: 0.2;
+}
 #cabecera-compras {
     margin-top: 2em;
     display: flex;
@@ -138,19 +145,18 @@ hr {
     margin-top: 2em;
     padding: 2em;
     font-size: .8em;
-    color: #bbb;
+    color: #000;
 }
 
 #detalles-entrega h4 {
     display: block;
     margin: 0 0 1em 0;
     padding: 0 0 .5em 0;
-    border-bottom: 1px solid #aaa;
+    border-bottom: 1px solid #373737;
 }
 
 #detalles-entrega img {
     padding-right: 1em;
-    filter: opacity(20%);
 }
 
 #seguir-comprando {
@@ -180,9 +186,9 @@ hr {
 }
 
 .btn:hover {
-    background: #3cb0fd;
+    background: #ddd;
     background-image: -webkit-linear-gradient(top, #ccc, #ddd);
-    background-image: -moz-linear-gradient(top, #3cb0fd, #ddd);
+    background-image: -moz-linear-gradient(top, #ddd, #ddd);
     background-image: -ms-linear-gradient(top, #ccc, #ddd);
     background-image: -o-linear-gradient(top, #ccc, #ddd);
     background-image: linear-gradient(to bottom, #ccc, #ddd);
@@ -190,12 +196,14 @@ hr {
 }
 
 #pago {
-    background-color: #d8d8d8;
     padding: 1em;
     margin-left: auto;
     margin-right: auto;
 }
-
+#tarjeta {
+    background-color: #DCD0C0;
+    padding: .5em;
+}
 #tarjeta .card-wrapper {
     margin-left: auto;
     margin-right: auto
@@ -223,7 +231,7 @@ hr {
     padding: .3em;
     height: 2em;
     border: 0;
-    border-bottom: 3px solid #000;
+    border-bottom: 3px solid #373737;
     font-weight: bold;
     font-variant-caps: all-small-caps;
     font-size: 1.2em;
@@ -260,7 +268,6 @@ hr {
 input[type=submit] {
     width: 100%;
     border: 0;
-    background-color: #3cb0fd;
     color: white;
     text-decoration: none;
     margin-top: 2em;
@@ -271,8 +278,7 @@ input[type=submit] {
     margin-top: 1em;
 }
 #otros {
-    margin-top: 1em;
-    border-top: 5px solid #000;
+    padding: 1em;
 }
 #otros .sub {
     margin-top: 1em;
@@ -298,7 +304,7 @@ input[type=submit] {
 /* Smartphones (portrait and landscape) ----------- */
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    .jp-card-container {width: 300px !important;}
+    .jp-card-container {width: 280px !important;}
 }
 
 /* iPads (portrait and landscape) ----------- */
